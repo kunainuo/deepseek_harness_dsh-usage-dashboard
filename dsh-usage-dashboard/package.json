@@ -1,0 +1,38 @@
+{
+  "name": "dsh-usage-dashboard",
+  "version": "1.0.0",
+  "description": "A persistent usage dashboard for the DeepSeek Harness (DSH) web app: real-time DeepSeek API balance plus local session token-usage statistics with bar charts and auto-refresh.",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dashboard",
+    "usage",
+    "tokens",
+    "balance",
+    "cordis",
+    "plugin"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
